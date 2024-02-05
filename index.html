@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="todo list to remember your tasks">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="main">
+      <section id="sec-add">
+        <h1 style="--i: 0" class="head">todo list</h1>
+        <form method="post" id="add" class="form">
+          <label class="label" for="newTask">new task</label>
+          <input
+            id="newTask"
+            class="input"
+            type="text"
+            name="new-task"
+            placeholder="new task"
+            autocomplete="off"
+          />
+          <button style="--i: 0" class="btn" type="submit">add task</button>
+        </form>
+      </section>
+      <hr class="hr-dashed" />
+      <section id="sec-edit">
+        <h2 style="--i: 1" class="head">tasks</h2>
+        <form method="post" class="form">
+          <label class="label" for="filterTask">filter tasks</label>
+          <input
+            id="filterTask"
+            class="input"
+            type="text"
+            name="filter-tasks"
+            placeholder="filter tasks"
+            autocomplete="off"
+          />
+        </form>
+        <ul id="task-list">
+          <!-- tasks -->
+        </ul>
+        <button style="--i: 1" id="clear" class="btn" type="button">
+          clear tasks
+        </button>
+      </section>
+    </main>
+    <div class="overlay none">
+      <div class="modal">
+        <p>Please write your task</p>
+        <hr/><br/>
+        <button id="btnModal" class="btn">close</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
